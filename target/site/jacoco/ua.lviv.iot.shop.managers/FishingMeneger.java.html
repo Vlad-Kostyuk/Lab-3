@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FishingMeneger.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab_5</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.shop.managers</a> &gt; <span class="el_source">FishingMeneger.java</span></div><h1>FishingMeneger.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.shop.managers;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import ua.lviv.iot.shop.model.FishingSetType;
+import ua.lviv.iot.shop.model.FishingShop;
+import ua.lviv.iot.shop.model.Producer;
+import ua.lviv.iot.shop.model.Season;
+
+public class FishingMeneger {
+
+<span class="nc" id="L13">	private List&lt;FishingShop&gt; fishing = new ArrayList&lt;&gt;();</span>
+
+<span class="nc" id="L15">	public FishingMeneger() {</span>
+
+<span class="nc" id="L17">	}</span>
+
+<span class="nc" id="L19">	public FishingMeneger(List&lt;FishingShop&gt; fishing) {</span>
+<span class="nc" id="L20">		this.fishing = fishing;</span>
+<span class="nc" id="L21">	}</span>
+
+	public List&lt;FishingShop&gt; getFishing() {
+<span class="nc" id="L24">		return fishing;</span>
+	}
+
+	public void setFishing(List&lt;FishingShop&gt; fishing) {
+<span class="nc" id="L28">		this.fishing = fishing;</span>
+<span class="nc" id="L29">	}</span>
+
+	public List&lt;FishingShop&gt; sortByPrice(List&lt;FishingShop&gt; fishingshop) {
+<span class="nc" id="L32">		fishingshop.sort((o1, o2) -&gt; (int) o1.getPrice() - (int) o2.getPrice());</span>
+<span class="nc" id="L33">		return fishingshop;</span>
+	}
+
+	public List&lt;FishingShop&gt; searchBySeason(Season season) {
+<span class="nc" id="L37">		List&lt;FishingShop&gt; fishingList = fishing;</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">		List&lt;FishingShop&gt; filteredFishingList = fishingList.stream().filter(fishing -&gt; fishing.getSeason() == season)</span>
+<span class="nc" id="L39">				.collect(Collectors.toList());</span>
+<span class="nc" id="L40">		return filteredFishingList;</span>
+	}
+
+	public List&lt;FishingShop&gt; searchByPrice(double price) {
+<span class="nc" id="L44">		List&lt;FishingShop&gt; fishingList = fishing;</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">		List&lt;FishingShop&gt; filteredFishingList = fishingList.stream().filter(fishing -&gt; fishing.getPrice() == price)</span>
+<span class="nc" id="L46">				.collect(Collectors.toList());</span>
+<span class="nc" id="L47">		return filteredFishingList;</span>
+	}
+
+	public List&lt;FishingShop&gt; searchByProducer(Producer producer) {
+<span class="nc" id="L51">		List&lt;FishingShop&gt; fishingList = fishing;</span>
+<span class="nc" id="L52">		List&lt;FishingShop&gt; filteredFishingList = fishingList.stream()</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">				.filter(fishing -&gt; fishing.getProducer() == producer).collect(Collectors.toList());</span>
+<span class="nc" id="L54">		return filteredFishingList;</span>
+	}
+
+	public List&lt;FishingShop&gt; searchByFishingSetType(FishingSetType fishingsettype) {
+<span class="nc" id="L58">		List&lt;FishingShop&gt; fishingList = fishing;</span>
+<span class="nc" id="L59">		List&lt;FishingShop&gt; filteredFishingList = fishingList.stream()</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">				.filter(fishing -&gt; fishing.getFishingsetype() == fishingsettype).collect(Collectors.toList());</span>
+<span class="nc" id="L61">		return filteredFishingList;</span>
+	}
+
+    public void addFishing(FishingShop fishingShop) {
+        
+        
+<span class="nc" id="L67">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.8.0" timestamp="2019-04-12T00:03:51.969">
+<file name="D:\work\Maven\apache-maven-3.6.0\Lab_5\src\main\java\ua\lviv\iot\shop\managers\FishingMain.java">
+<violation beginline="87" endline="87" begincolumn="44" endcolumn="70" rule="UselessParentheses" ruleset="Code Style" package="ua.lviv.iot.shop.managers" class="FishingMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+</pmd>
