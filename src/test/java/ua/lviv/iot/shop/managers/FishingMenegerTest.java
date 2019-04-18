@@ -21,6 +21,7 @@ class FishingMenegerTest {
 
     private List<FishingShop> fishingShop = new LinkedList<>();
     private List<FishingShop> fishingShopTest = new LinkedList<>();
+    private List<FishingShop> fishingShopReturn = new LinkedList<>();
 
     final double priseFishing = 800;
     final double priseNet = 1250;
@@ -30,18 +31,21 @@ class FishingMenegerTest {
     public void setUp() {
 
         fishingNet.setPrice(priseNet);
+        fishingNet.setName("Rods");
         fishingNet.setSeason(Season.SUMMER);
         fishingNet.setProducer(Producer.ASIA);
         fishingNet.setFishingsetype(FishingSetType.BAIT);
         fishingShop.add(fishingNet);
 
         fishing.setPrice(priseFishing);
+        fishing.setName("Net");
         fishing.setSeason(Season.WINTER);
         fishing.setProducer(Producer.EUROPE);
         fishing.setFishingsetype(FishingSetType.CLOTHING);
         fishingShop.add(fishing);
 
         fishingTwo.setPrice(priseFishingTwo);
+        fishingTwo.setName("fishing rod");
         fishingTwo.setSeason(Season.ALL_SEASON);
         fishingTwo.setProducer(Producer.USA);
         fishingTwo.setFishingsetype(FishingSetType.FISHINGNET);
@@ -52,15 +56,34 @@ class FishingMenegerTest {
     }
 
     @Test
-    void sortByPriceTest() {
+    void searchByPricetTest() {
+        
+        fishingShopTest.clear();
+        fishingShopTest.add(fishingTwo);
+        
+        assertEquals(fishingShopTest, fishingMeneger.searchByPrice(priseFishingTwo));
+    }
+    
+    @Test
+    void sortByPriceUpDownTest() {
 
         fishingShopTest.add(fishing);
         fishingShopTest.add(fishingTwo);
         fishingShopTest.add(fishingNet);
 
-        assertEquals(fishingShopTest, fishingMeneger.sortByPrice(fishingShop));
+        assertEquals(fishingShopTest, fishingMeneger.sortByPriceUpDown(true));
     }
 
+    @Test
+    void sortByNameUpDownTest() {
+
+        fishingShopTest.add(fishingTwo);
+        fishingShopTest.add(fishingNet);
+        fishingShopTest.add(fishing);
+
+        assertEquals(fishingShopTest, fishingMeneger.sortByNameUpDown(true));
+    }
+    
     @Test
     void searchBySeasonTest() {
 
@@ -71,12 +94,13 @@ class FishingMenegerTest {
     }
     
     @Test
-    void searchByPricetTest() {
-        
-        fishingShopTest.clear();
+    void sortBySeasonUpDownTest() {
+
         fishingShopTest.add(fishingTwo);
-        
-        assertEquals(fishingShopTest, fishingMeneger.searchByPrice(priseFishingTwo));
+        fishingShopTest.add(fishingNet);
+        fishingShopTest.add(fishing);
+
+        assertEquals(fishingShopTest, fishingMeneger.sortBySeasonUpDown(true));
     }
     
     @Test
@@ -88,6 +112,17 @@ class FishingMenegerTest {
         assertEquals(fishingShopTest, fishingMeneger.searchByProducer(Producer.ASIA));
     }
     
+    
+    @Test
+    void sortByProducerUpDownTest() {
+
+        fishingShopTest.add(fishingNet);
+        fishingShopTest.add(fishing);
+        fishingShopTest.add(fishingTwo);
+
+        assertEquals(fishingShopTest, fishingMeneger.sortByProducerUpDown(true));
+    }
+    
     @Test
     void searchByFishingSetTypeTest() {
         
@@ -95,5 +130,15 @@ class FishingMenegerTest {
         fishingShopTest.add(fishingTwo);
         
         assertEquals(fishingShopTest, fishingMeneger.searchByFishingSetType(FishingSetType.FISHINGNET));
+    }
+    
+    @Test
+    void sortByFishingSetTypeUpDownTest() {
+
+        fishingShopTest.add(fishingTwo);
+        fishingShopTest.add(fishing);
+        fishingShopTest.add(fishingNet);
+
+        assertEquals(fishingShopTest, fishingMeneger.sortByFishingSetTypeUpDown(false));
     }
 }

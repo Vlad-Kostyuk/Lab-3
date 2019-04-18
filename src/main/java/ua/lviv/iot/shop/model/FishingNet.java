@@ -1,5 +1,7 @@
 package ua.lviv.iot.shop.model;
 
+import ua.lviv.iot.shop.model.FishingShop;
+
 public class FishingNet extends FishingShop {
 
 	private int width;

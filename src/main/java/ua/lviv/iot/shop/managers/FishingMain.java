@@ -1,5 +1,4 @@
 package ua.lviv.iot.shop.managers;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -16,71 +15,70 @@ import ua.lviv.iot.shop.model.Size;
 
 public class FishingMain {
 
+    public final static  int LENGTH_FISHING_ROD = 3;
+
+    public final static double PRISE_FISHING_ROD = 1200;
+    public final static double PRISE_NET = 1250;
+    public final static double PRISE_FISHING_ROD_TWO = 900;
+    public final static double PRISE_CLOTHING = 800;
+    public final static double PRISE_FISHING_ROD_THREE = 1700;
+
+    public final static String NAME_FISHING_ROD = "вудка";
+    public final static String NAME_NET = "с≥тка";
+    public final static String NAME_FISHING_ROD_TWO = "вудка";
+    public final static String NAME_CLOTHING = "од€г";
+    public final static String NAME_FISHING_ROD_THREE = "вудка";
+
+    public final static double MASS_FISHING_ROD = 0.2;
+    public final static double MASS_NET = 1;
+    public final static double MASS_FISHING_ROD_TWO = 0.2;
+    public final static double MASS_CLOTHING = 0.2;
+    public final static double MASS_FISHING_ROD_THREE = 0.2;
+
+    public final static String MATERIAL_FISHING_ROD = "пласмаса";
+    public final static String MATERIAL_NET = "металев≥ прути";
+    public final static String MATERIAL_FISHING_ROD_TWO = "пласмаса";
+    public final static String MATERIAL_CLOTHING = "тканина";
+    public final static String MATERIAL_FISHING_ROD_THREE = "пласмаса";
+
+    public final static int GUARANTEE_FISHING_ROD = 12;
+    public final static int GUARANTEE_NET = 12;
+    public final static int GUARANTEE_FISHING_ROD_TWO = 12;
+    public final static int GUARANTEE_CLOTHING = 12;
+    public final static int GUARANTEE_FISHING_ROD_THREE = 24;
+
+    public final static String COLOR_FISHING_ROD = "green";
+    public final static String COLOR_NET = "black";
+    public final static String COLOR_FISHING_ROD_TWO = "green";
+    public final static String COLOR_CLOTHING = "white";
+    public final static String COLOR_FISHING_ROD_THREE = "green";
+
+    public final static int MAXIMUMWEIGHT_FISHING_ROD = 2;
+    public final static int MAXIMUMWEIGHT_FISHING_ROD_TWO = 3;
+
+    public final static String FORM_FISHING_ROD = "Prama";
+
     public static void main(String[] args) {
-
-        final int lengthFishingRod = 3;
-
-        final double priseFishingRod = 1200;
-        final double priseNet = 1250;
-        final double priseFishingRodTwo = 900;
-        final double priseClothing = 800;
-        final double priseFishingRodThree = 1700;
-
-        final String nameFishingRod = "вудка";
-        final String nameNet = "с≥тка";
-        final String nameFishingRodTwo = "вудка";
-        final String nameClothing = "од€г";
-        final String nameFishingRodThree = "вудка";
-
-        final double massFishingRod = 0.2;
-        final double massNet = 1;
-        final double massFishingRodTwo = 0.2;
-        final double massClothing = 0.2;
-        final double massFishingRodThree = 0.2;
-
-        final String materialFishingRod = "пласмаса";
-        final String materialNet = "металев≥ прути";
-        final String materialFishingRodTwo = "пласмаса";
-        final String materialClothing = "тканина";
-        final String materialFishingRodThree = "пласмаса";
-
-        final int guaranteeFishingRod = 12;
-        final int guaranteeNet = 12;
-        final int guaranteeFishingRodTwo = 12;
-        final int guaranteeClothing = 12;
-        final int guaranteeFishingRodThree = 24;
-
-        final String colorFishingRod = "green";
-        final String colorNet = "black";
-        final String colorFishingRodTwo = "green";
-        final String colorClothing = "white";
-        final String colorFishingRodThree = "green";
-
-        final int maximumWeightFishingRod = 2;
-        final int maximumWeightFishingRodTwo = 3;
-
-        final String formFishingRod = "prama";
 
         List<FishingShop> fishing = new ArrayList<>();
 
-        fishing.add(new FishingShop(priseFishingRod, nameFishingRod, massFishingRod, materialFishingRod,
-                Producer.USA, guaranteeFishingRod, colorFishingRod, Season.SUMMER, FishingSetType.FISHINGNET));
+        fishing.add(new FishingShop(PRISE_FISHING_ROD, NAME_FISHING_ROD, MASS_FISHING_ROD, MATERIAL_FISHING_ROD,
+                Producer.USA, GUARANTEE_FISHING_ROD, COLOR_FISHING_ROD, Season.SUMMER, FishingSetType.FISHINGNET));
 
-        fishing.add(new FishingShop(priseNet, nameNet, massNet, materialNet, Producer.EUROPE, guaranteeNet,
-                colorNet, Season.ALL_SEASON, FishingSetType.BAIT));
+        fishing.add(new FishingShop(PRISE_NET, NAME_NET, MASS_NET, MATERIAL_NET, Producer.EUROPE, GUARANTEE_NET,
+                COLOR_NET, Season.ALL_SEASON, FishingSetType.BAIT));
 
-        fishing.add(new Bait(priseFishingRodTwo, nameFishingRodTwo, massFishingRodTwo,
-                materialFishingRodTwo,  Producer.USA, guaranteeFishingRodTwo, colorFishingRodTwo, Season.SUMMER,
-                FishingSetType.FISHINGNET, maximumWeightFishingRod));
+        fishing.add(new Bait(PRISE_FISHING_ROD_TWO, NAME_FISHING_ROD_TWO, MASS_FISHING_ROD_TWO,
+                MATERIAL_FISHING_ROD_TWO, Producer.USA, GUARANTEE_FISHING_ROD_TWO, COLOR_FISHING_ROD_TWO, Season.SUMMER,
+                FishingSetType.FISHINGNET, MAXIMUMWEIGHT_FISHING_ROD));
 
-        fishing.add(new Clothing(priseClothing, nameClothing, massClothing, materialClothing, Producer.EUROPE,
-                guaranteeClothing, colorClothing, Season.SUMMER, FishingSetType.CLOTHING, Sex.FEMALE, Size.L));
+        fishing.add(new Clothing(PRISE_CLOTHING, NAME_CLOTHING, MASS_CLOTHING, MATERIAL_CLOTHING, Producer.EUROPE,
+                GUARANTEE_CLOTHING, COLOR_CLOTHING, Season.SUMMER, FishingSetType.CLOTHING, Sex.FEMALE, Size.L));
 
-        fishing.add(new FishingNet(priseFishingRodThree, nameFishingRodThree, massFishingRodThree,
-                materialFishingRodThree, Producer.USA, guaranteeFishingRodThree, colorFishingRodThree,
-                Season.SUMMER, FishingSetType.FISHINGNET, maximumWeightFishingRodTwo, lengthFishingRod,
-                formFishingRod));
-        
+        fishing.add(new FishingNet(PRISE_FISHING_ROD_THREE, NAME_FISHING_ROD_THREE, MASS_FISHING_ROD_THREE,
+                MATERIAL_FISHING_ROD_THREE, Producer.USA, GUARANTEE_FISHING_ROD_THREE, COLOR_FISHING_ROD_THREE,
+                Season.SUMMER, FishingSetType.FISHINGNET, MAXIMUMWEIGHT_FISHING_ROD_TWO, LENGTH_FISHING_ROD,
+                FORM_FISHING_ROD));
 
         FishingMeneger database = new FishingMeneger(fishing);
 
@@ -90,7 +88,7 @@ public class FishingMain {
         fishing.sort(Comparator.comparing(FishingShop::getName));
         System.out.println(fishing);
 
-        List<FishingShop> searchByPrice = database.searchByPrice(priseClothing);
+        List<FishingShop> searchByPrice = database.searchByPrice(800);
         System.out.println(searchByPrice);
 
         List<FishingShop> searchBySeason = database.searchBySeason(Season.ALL_SEASON);

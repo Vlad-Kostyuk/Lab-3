@@ -1,5 +1,8 @@
 package ua.lviv.iot.shop.model;
 
+import ua.lviv.iot.shop.model.Sex;
+import ua.lviv.iot.shop.model.Size;
+
 public class Clothing extends FishingShop {
 	private Size size;
 	private Sex sex;

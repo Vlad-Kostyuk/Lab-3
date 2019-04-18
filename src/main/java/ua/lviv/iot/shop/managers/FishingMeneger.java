@@ -8,6 +8,7 @@ import ua.lviv.iot.shop.model.FishingShop;
 import ua.lviv.iot.shop.model.Producer;
 import ua.lviv.iot.shop.model.Season;
 
+
 public class FishingMeneger {
 
 	private List<FishingShop> fishing = new ArrayList<>();
@@ -60,10 +61,4 @@ public class FishingMeneger {
 				.filter(fishing -> fishing.getFishingsetype() == fishingsettype).collect(Collectors.toList());
 		return filteredFishingList;
 	}
-
-    public void addFishing(FishingShop fishingShop) {
-        fishing.add(fishingShop);
-    }
-
-   
 }
