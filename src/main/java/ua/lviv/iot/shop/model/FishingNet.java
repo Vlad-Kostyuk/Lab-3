@@ -1,7 +1,5 @@
 package ua.lviv.iot.shop.model;
 
-import ua.lviv.iot.shop.model.FishingShop;
-
 public class FishingNet extends FishingShop {
 
 	private int width;
@@ -43,5 +41,13 @@ public class FishingNet extends FishingShop {
 	public void setForm(String form) {
 		this.form = form;
 	}
+	
+	public String getHeaders() {
+        return super.getHeaders() + "," + "width" + "," + "length" + "," + "form";
+    }
+    
+    public String toCVS() {
+        return String.valueOf(super.toCVS() + "," + width + "," + length + "," + form);
+    }
 
 }

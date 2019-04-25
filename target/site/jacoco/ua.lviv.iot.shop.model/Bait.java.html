@@ -2,25 +2,34 @@
 
 public class Bait extends FishingShop {
 
-	private double length;
+    private double length;
 
-<span class="nc" id="L7">	public Bait() {</span>
+<span class="nc" id="L7">    public Bait() {</span>
 
-<span class="nc" id="L9">	}</span>
+<span class="nc" id="L9">    }</span>
 
-	public Bait(double price, String name, double masa, String material, Producer producer, int guarantee, String color,
-			Season season, FishingSetType fishingsetype, double length) {
-<span class="nc" id="L13">		super(price, name, masa, material, producer, guarantee, color, season, fishingsetype);</span>
-<span class="nc" id="L14">		this.length = length;</span>
-<span class="nc" id="L15">	}</span>
+    public Bait(double price, String name, double masa, String material, Producer producer, int guarantee, String color,
+            Season season, FishingSetType fishingsetype, double length) {
+<span class="nc" id="L13">        super(price, name, masa, material, producer, guarantee, color, season, fishingsetype);</span>
+<span class="nc" id="L14">        this.length = length;</span>
+<span class="nc" id="L15">    }</span>
 
-	public double getLength() {
-<span class="nc" id="L18">		return length;</span>
-	}
+    public double getLength() {
+<span class="nc" id="L18">        return length;</span>
+    }
 
-	public void setLength(double length) {
-<span class="nc" id="L22">		this.length = length;</span>
-<span class="nc" id="L23">	}</span>
+    public void setLength(double length) {
+<span class="nc" id="L22">        this.length = length;</span>
+<span class="nc" id="L23">    }</span>
+
+    public String getHeaders() {
+<span class="nc" id="L26">        return super.getHeaders() + &quot;,&quot; + &quot;length&quot;;</span>
+    }
+    
+    public String toCVS() {
+<span class="nc" id="L30">        return String.valueOf(super.toCVS() + &quot;,&quot; + length);</span>
+    }
+    
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -1,8 +1,5 @@
 package ua.lviv.iot.shop.model;
 
-import ua.lviv.iot.shop.model.Sex;
-import ua.lviv.iot.shop.model.Size;
-
 public class Clothing extends FishingShop {
 	private Size size;
 	private Sex sex;
@@ -33,5 +30,12 @@ public class Clothing extends FishingShop {
 	public void setSex(Sex sex) {
 		this.sex = sex;
 	}
-
+	
+	public String getHeaders() {
+        return super.getHeaders() + "," + "size" + "," + "size";
+    }
+	
+	public String toCVS() {
+        return String.valueOf(super.toCVS() + "," + size + "," + sex);
+    }
 }

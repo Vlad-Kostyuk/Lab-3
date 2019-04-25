@@ -30,5 +30,13 @@ public class FishingRods extends FishingShop {
 	public void setLength(double length) {
 		this.length = length;
 	}
+	
+	public String getHeaders() {
+        return super.getHeaders() + "," + "maximumWeight" + "," + "length";
+    }
+    
+    public String toCVS() {
+        return super.toCVS() + "," + maximumWeight + "," + length;
+    }
 
 }

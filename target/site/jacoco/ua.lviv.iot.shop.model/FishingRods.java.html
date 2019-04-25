@@ -30,6 +30,14 @@ public class FishingRods extends FishingShop {
 	public void setLength(double length) {
 <span class="nc" id="L31">		this.length = length;</span>
 <span class="nc" id="L32">	}</span>
+	
+	public String getHeaders() {
+<span class="nc" id="L35">        return super.toCVS() + &quot;,&quot; + &quot;maximumWeight&quot; + &quot;,&quot; + &quot;length&quot;;</span>
+    }
+    
+    public String toCVS() {
+<span class="nc" id="L39">        return String.valueOf(super.toCVS() + &quot;,&quot; + maximumWeight + &quot;,&quot; + length);</span>
+    }
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

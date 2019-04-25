@@ -83,14 +83,14 @@ import ua.lviv.iot.shop.model.Size;
         
 
 <span class="nc" id="L85">        FishingMeneger database = new FishingMeneger(fishing);</span>
-
-<span class="nc" id="L87">        List&lt;FishingShop&gt; sortedFishing = (new FishingMeneger(fishing)).sortByPrice(fishing);</span>
+      
+<span class="nc" id="L87">        List&lt;FishingShop&gt; sortedFishing = database.sortByPriceUpDown(false);</span>
 <span class="nc" id="L88">        System.out.println(sortedFishing);</span>
-
+       
 <span class="nc" id="L90">        fishing.sort(Comparator.comparing(FishingShop::getName));</span>
 <span class="nc" id="L91">        System.out.println(fishing);</span>
 
-<span class="nc" id="L93">        List&lt;FishingShop&gt; searchByPrice = database.searchByPrice(800);</span>
+<span class="nc" id="L93">        List&lt;FishingShop&gt; searchByPrice = database.searchByPrice(priseClothing);</span>
 <span class="nc" id="L94">        System.out.println(searchByPrice);</span>
 
 <span class="nc" id="L96">        List&lt;FishingShop&gt; searchBySeason = database.searchBySeason(Season.ALL_SEASON);</span>
@@ -101,7 +101,10 @@ import ua.lviv.iot.shop.model.Size;
 
 <span class="nc" id="L102">        List&lt;FishingShop&gt; searchByFishingSetType = database.searchByFishingSetType(FishingSetType.BAIT);</span>
 <span class="nc" id="L103">        System.out.println(searchByFishingSetType);</span>
-<span class="nc" id="L104">    }</span>
+        
+<span class="nc" id="L105">        List&lt;FishingShop&gt; sortedFishing1 = database.sortBySeasonUpDown(false);</span>
+<span class="nc" id="L106">        System.out.println(sortedFishing1);</span>
+<span class="nc" id="L107">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
