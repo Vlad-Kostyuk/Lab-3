@@ -12,16 +12,16 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import ua.lviv.iot.shop.model.Bait;
-import ua.lviv.iot.shop.model.Clothing;
-import ua.lviv.iot.shop.model.FishingNet;
-import ua.lviv.iot.shop.model.FishingRods;
-import ua.lviv.iot.shop.model.FishingSetType;
-import ua.lviv.iot.shop.model.FishingShop;
-import ua.lviv.iot.shop.model.Producer;
-import ua.lviv.iot.shop.model.Season;
-import ua.lviv.iot.shop.model.Sex;
-import ua.lviv.iot.shop.model.Size;
+import ua.lviv.iot.model.Bait;
+import ua.lviv.iot.model.Clothing;
+import ua.lviv.iot.model.FishingNet;
+import ua.lviv.iot.model.FishingRods;
+import ua.lviv.iot.model.FishingSetType;
+import ua.lviv.iot.model.FishingShop;
+import ua.lviv.iot.model.Producer;
+import ua.lviv.iot.model.Season;
+import ua.lviv.iot.model.Sex;
+import ua.lviv.iot.model.Size;
 
 public class FishingMain {
 
@@ -38,11 +38,11 @@ public class FishingMain {
         final double priseClothing = 800;
         final double priseFishingRodThree = 1700;
 
-        final String nameFishingRod = "вудка";
-        final String nameNet = "сітка";
-        final String nameFishingRodTwo = "вудка";
-        final String nameClothing = "одяг";
-        final String nameFishingRodThree = "вудка";
+        final String nameFishingRod = "РІСѓРґРєР°";
+        final String nameNet = "СЃС–С‚РєР°";
+        final String nameFishingRodTwo = "РІСѓРґРєР°";
+        final String nameClothing = "РѕРґСЏРі";
+        final String nameFishingRodThree = "РІСѓРґРєР°";
 
         final double massFishingRod = 0.2;
         final double massNet = 1;
@@ -50,11 +50,11 @@ public class FishingMain {
         final double massClothing = 0.2;
         final double massFishingRodThree = 0.2;
 
-        final String materialFishingRod = "пласмаса";
-        final String materialNet = "металеві прути";
-        final String materialFishingRodTwo = "пласмаса";
-        final String materialClothing = "тканина";
-        final String materialFishingRodThree = "пласмаса";
+        final String materialFishingRod = "РїР»Р°СЃРјР°СЃР°";
+        final String materialNet = "РјРµС‚Р°Р»РµРІС– РїСЂСѓС‚Рё";
+        final String materialFishingRodTwo = "РїР»Р°СЃРјР°СЃР°";
+        final String materialClothing = "С‚РєР°РЅРёРЅР°";
+        final String materialFishingRodThree = "РїР»Р°СЃРјР°СЃР°";
 
         final int guaranteeFishingRod = 12;
         final int guaranteeNet = 12;
