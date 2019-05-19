@@ -6,14 +6,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.List;
- 
 
 public class FishingShopWriter {
-    
-  public static final String  csvFile = "fishing.csv";
-  
+
     public void wtiteToFile(List<String> fishing) {
 
+        String csvFile = "fishing.cvs";
         File file = new File(csvFile);
         try (FileOutputStream fileOutputStream = new FileOutputStream(file);
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);

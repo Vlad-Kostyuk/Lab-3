@@ -1,0 +1,14 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Lab_5,ua.lviv.iot.shop.managers,FishingMeneger,219,0,18,0,40,0,33,0,24,0
+Lab_5,ua.lviv.iot.shop.managers,FishingMain,211,0,0,0,57,0,2,0,2,0
+Lab_5,ua.lviv.iot.shop.managers,FishingShopWriter,80,0,2,0,23,0,3,0,2,0
+Lab_5,ua.lviv.iot.shop.model,Sex,24,0,0,0,2,0,1,0,1,0
+Lab_5,ua.lviv.iot.shop.model,Season,44,0,0,0,2,0,1,0,1,0
+Lab_5,ua.lviv.iot.shop.model,Clothing,64,0,0,0,14,0,8,0,8,0
+Lab_5,ua.lviv.iot.shop.model,FishingRods,64,0,0,0,14,0,8,0,8,0
+Lab_5,ua.lviv.iot.shop.model,Producer,34,0,0,0,2,0,1,0,1,0
+Lab_5,ua.lviv.iot.shop.model,FishingShop,214,0,0,0,43,0,23,0,23,0
+Lab_5,ua.lviv.iot.shop.model,FishingSetType,44,0,0,0,2,0,1,0,1,0
+Lab_5,ua.lviv.iot.shop.model,Bait,49,0,0,0,10,0,6,0,6,0
+Lab_5,ua.lviv.iot.shop.model,FishingNet,79,0,0,0,18,0,10,0,10,0
+Lab_5,ua.lviv.iot.shop.model,Size,74,0,0,0,2,0,1,0,1,0

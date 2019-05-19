@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import ua.lviv.iot.model.FishingSetType;
-import ua.lviv.iot.model.FishingShop;
-import ua.lviv.iot.model.Producer;
-import ua.lviv.iot.model.Season;
+import ua.lviv.iot.shop.model.FishingSetType;
+import ua.lviv.iot.shop.model.FishingShop;
+import ua.lviv.iot.shop.model.Producer;
+import ua.lviv.iot.shop.model.Season;
 
 public class FishingMeneger {
 
