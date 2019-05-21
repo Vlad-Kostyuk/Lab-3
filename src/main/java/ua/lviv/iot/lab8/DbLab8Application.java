@@ -22,8 +22,6 @@ public class DbLab8Application {
     final int guaranteeNet = 12;
     final String colorNet = "black";
 
-
-    
     public static void main(String[] args) {
         SpringApplication.run(DbLab8Application.class, args);
     }
@@ -31,11 +29,9 @@ public class DbLab8Application {
     @Bean
     public CommandLineRunner products(FishingShopRepository repository) {
         return (args) -> {
-            repository.save(new FishingShopDb(priseNet, nameNet , massNet, materialNet, guaranteeNet,
-                    colorNet)); 
+            repository.save(new FishingShopDb(priseNet, nameNet , massNet, materialNet, Producer.ASIA, guaranteeNet,
+                    colorNet, Season.ALL_SEASON, FishingSetType.FISHINGNET)); 
 
-
-            
             repository.findAll().forEach(fishingshopdb -> System.out.println(fishingshopdb));
         };
         
