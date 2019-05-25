@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab8;
+package ua.lviv.iot.lab8.rest.config;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
