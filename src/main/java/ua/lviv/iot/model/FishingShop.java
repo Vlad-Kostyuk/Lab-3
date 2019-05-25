@@ -18,18 +18,18 @@ public class FishingShop {
     private double masa;
     private String material;
     
-
+    @Column(name = "producer")
     @Enumerated(EnumType.STRING)
     private Producer producer;
     
     private int guarantee;
     private String color;
     
-
+    @Column(name = "season")
     @Enumerated(EnumType.STRING)
     private Season season;
     
-
+    @Column(name = "fishingsetype")
     @Enumerated(EnumType.STRING)
     private FishingSetType fishingsetype;
     
@@ -46,7 +46,7 @@ public class FishingShop {
 
     public FishingShop(double price, String name, double masa, String material, Producer producer, int guarantee,
             String color, Season season, FishingSetType fishingsetype) {
-        super();
+
         this.price = price;
         this.name = name;
         this.masa = masa;
