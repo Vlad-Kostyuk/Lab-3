@@ -15,11 +15,11 @@ public class DbLab8Application {
 
     FishingShop fishingShop;
 
-    final double priseNet = 1251;
-    final String nameNet = "сітка";
-    final double massNet = 1;
+    final double priseNet = 151;
+    final String nameNet = "net";
+    final double massNet = 10;
     final String materialNet = "металеві прути";
-    final int guaranteeNet = 12;
+    final int guaranteeNet = 15;
     final String colorNet = "black";
 
     public static void main(String[] args) {
