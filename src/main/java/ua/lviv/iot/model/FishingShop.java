@@ -1,5 +1,6 @@
 package ua.lviv.iot.model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -7,22 +8,38 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
-public class FishingShop {
+@Table(name = "fishing_shop_db")
+@NamedQueries({
+    @NamedQuery(name = "FishingShop.findAll", query = "SELECT u FROM FishingShop u")
+    , @NamedQuery(name = "FishingShop.findById", query = "SELECT u FROM FishingShop u WHERE u.id = :id")
+    , @NamedQuery(name = "FishingShop.findByName", query = "SELECT u FROM FishingShop u WHERE u.name = :userName")
+    })
+public class FishingShop implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @Column(name="price")
     private double price;
+    @Column
     private String name;
+    @Column
     private double masa;
+    @Column
     private String material;
     
     @Column(name = "producer")
     @Enumerated(EnumType.STRING)
     private Producer producer;
     
+    @Column
     private int guarantee;
+    @Column
     private String color;
     
     @Column(name = "season")
@@ -33,11 +50,17 @@ public class FishingShop {
     @Enumerated(EnumType.STRING)
     private FishingSetType fishingsetype;
     
+    @Column
     private FishingNet fishingnet;
+    @Column
     private FishingRods fishirods;
+    @Column
     private Bait bait;
+    @Column
     private Clothing clothing;
+    @Column
     private Sex sex;
+    @Column
     private Size size;
 
     public FishingShop() {
@@ -146,6 +169,54 @@ public class FishingShop {
         this.fishingsetype = fishingsetype;
     }
     //
+
+    public FishingNet getFishingnet() {
+        return fishingnet;
+    }
+
+    public void setFishingnet(FishingNet fishingnet) {
+        this.fishingnet = fishingnet;
+    }
+
+    public FishingRods getFishirods() {
+        return fishirods;
+    }
+
+    public void setFishirods(FishingRods fishirods) {
+        this.fishirods = fishirods;
+    }
+
+    public Bait getBait() {
+        return bait;
+    }
+
+    public void setBait(Bait bait) {
+        this.bait = bait;
+    }
+
+    public Clothing getClothing() {
+        return clothing;
+    }
+
+    public void setClothing(Clothing clothing) {
+        this.clothing = clothing;
+    }
+
+    public Sex getSex() {
+        return sex;
+    }
+
+    public void setSex(Sex sex) {
+        this.sex = sex;
+    }
+
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
+    }
 
     public String getHeaders() {
         return "price" + "," + "name" + "," + "masa" + "," + "material" + "," + "guarantee" + "," + "color";
